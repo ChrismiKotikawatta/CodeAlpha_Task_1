@@ -33,97 +33,49 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-.navbar {
-    top: 0;
-    right: 0;
-    width: 100%;
+.header {
     position: fixed;
-    z-index: 100;
-    height: 15%;
-    background-color: solid var(--bg-color);
-}
-
-.menu ul {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
     display: flex;
-    flex-direction: row;
-    margin: 0;
-    /* Set margin to 0 to remove extra spacing */
-    padding: 40px 50px;
-    /* Adjust padding as necessary */
-    float: right;
-
-}
-
-.menu ul li {
-    list-style: none;
-    display: inline;
-    text-decoration: none;
-    
-    font-weight: bold;
-    font-size: 20px;
-
-}
-
-.menu li a {
-    text-decoration: none;
-    color:var(--main-color);
-    margin: 0 20px;
-}
-
-.menu li a:hover {
-    color:var(--snd-bf-color);
-    
-}
-
-.menu li a:active{
-    color:var(--snd-bf-color);
-}
-
-.logo {
-    /* float: left; Align the logo to the left */
-    font-size: 20px;
-    
+    justify-content: space-between;
+    align-items: center;
     z-index: 100;
-    /* width: 50%; */
-
 
 }
 
-.logo ul {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    /* Set margin to 0 to remove extra spacing */
-    padding: 40px 50px;
-    /* Adjust padding as necessary */
-    float: left;
-
-}
-
-.logo ul li {
-    list-style: none;
-    display: inline;
-    text-decoration: none;
-
-    font-weight: bold;
-    font-size: 20px;
-
-}
-
-
-.logo li a {
-    text-decoration: none;
-    color:var(--main-color);
-    margin: 0 20px;
-}
-
-
-
-.logo li a:hover {
-    color:var(--snd-bf-color);
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
     cursor: pointer;
-   
+
 }
+
+.navbar a{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left:4rem ;
+    font-weight: 700;
+
+}
+
+.navbar a:hover,
+.navbar a:active{
+    color:var(--text-color);
+
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+
+}
+
 
 .home {
     display: flex;
@@ -139,11 +91,39 @@ section {
 
 .home-content h3:nth-of-type(2) {
     margin-bottom: 2rem;
+    
+}
+
+.home-content span{
+    color: transparent;
+    -webkit-text-stroke: .5px var(--bg-color);
+    background-image: linear-gradient(var(--main-color), var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -410px 0;
+    animation: animateText 6s linear infinite;
+}
+
+@keyframes animateText {
+    0%,
+    95%,
+    100% {
+        background-position: -410px 0;
+    }
+
+    65%,85%{
+        background-position: 0 0;
+    }
+
+
+
+    
 }
 
 span{
     color: var(--main-color);
     animation: text-animation 8s infinite;
+    
 }
 
 
@@ -151,6 +131,7 @@ span{
     font-size: 5.6 rem;
     font-weight: 700;
     line-height: 1.3;
+   
 }
 
 .personal-img img {
@@ -394,7 +375,7 @@ span{
 
 .technologies-container .technologies-box{
     display: flex;
-    flex: 1 ;
+    flex: 0 ;
     background-color: var(--bg-color);
     padding: 5.1rem;
     border-radius: 2rem;
@@ -503,4 +484,97 @@ span{
     font-size: 2.4rem;
     color: var(--snd-bf-color);
 
+}
+
+@media (max-width: 1200px) {
+    html{
+        font-size: 55%;
+    }
+
+    section{
+        padding: 10rem 3%;
+    }
+
+    .projects{
+        padding-bottom: 7rem;
+    }
+
+    .contact{
+        min-height: auto;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background:var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0.5rem 1rem rgba (0,0,0,.2);
+        display: none;
+
+
+    }
+    .navbar.active{
+        display: block;
+    }
+    
+    .home{
+        flex-direction: column;
+    }
+    .home-content{
+        order: 2;
+    }
+
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .personal-img img{
+        width: 60vw;
+        margin-top: 4rem;
+    }
+    
+    .about{
+        flex-direction: column;
+    }
+
+    .projects h2{
+        margin-bottom: 3rem;
+    }
+
+    .projects-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+} 
+
+@media (max-width: 617px) {
+
+    .projects-container{
+        grid-template-columns: 1fr;
+    }
+
+    .personal-img img{
+        width:80vw;
+        margin-top: 8rem;
+    }
+    
 }
