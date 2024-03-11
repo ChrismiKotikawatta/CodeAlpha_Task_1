@@ -12,10 +12,10 @@
 }
 
 :root {
-    --bg-color: #2D2727;
-    --snd-bf-color: #70a1ff;
-    --text-color: #4b7bec;
-    --main-color: #F0EB8D;
+    --bg-color: #03001C;
+    --snd-bf-color: #301E67;
+    --text-color: #5B8FB9;
+    --main-color: #B6EADA;
 }
 
 html {
@@ -317,6 +317,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 .about-content {
@@ -341,6 +342,38 @@ span{
     line-height: 1.3;
 }
 
+.experience{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: var(--snd-bf-color);
+}
+
+.experience h2{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.experience h3{
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    margin: 1px;
+
+}
+.experience p , .experience li{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-top: 2px;
+}
+
+.experience h4{
+    font-size: 2rem;
+   
+}
 .technologies{
     background-color: var(--bg-color);
 }
