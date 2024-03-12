@@ -96,6 +96,7 @@ section {
 
 .home-content h3:nth-of-type(2) {
     margin-bottom: 2rem;
+    font-size: 3rem;
     
 }
 
@@ -235,7 +236,8 @@ span{
 .projects-box img{
     width: 100%;
     transition: .5s ease;
-    opacity: 0.7;
+    opacity: 0.9;
+    
 }
 
 .projects-box:hover{
@@ -324,7 +326,7 @@ span{
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0.4rem;
+    padding: 4rem;
     flex-direction: column;
     margin: 5rem;
     width: auto;
@@ -332,6 +334,34 @@ span{
     flex: 2;
   
 
+}
+
+.about-projects a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+    
+}
+
+.descr{
+    background: rgba(3, 0, 28, 0.26);
+    box-shadow: 0 0 1rem var(--snd-bf-color);
+    padding: 20px;
+    border-radius: 20px;
+    width: 75%;
+}
+
+.descr p{
+    font-size: 2rem;
 }
 .personal-img-about {
     display: flex;
