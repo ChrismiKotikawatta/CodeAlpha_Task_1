@@ -41,8 +41,8 @@ ScrollReveal({
  });
 
  ScrollReveal().reveal('.home-content,.heading', { origin: 'top'});
- ScrollReveal().reveal('.personal-img,  .projects-box, .contact, .about-content ,.technologies-box', { origin: 'button' });
- ScrollReveal().reveal('.home-content h1 , .experience-container', { origin: 'left' });
+ ScrollReveal().reveal('.personal-img,  .projects-box, .contact, .about-content ,.technologies-box, .about-projects', { origin: 'bottom' });
+ ScrollReveal().reveal('.home-content h1 , .experience-container, .descr', { origin: 'left' });
  ScrollReveal().reveal('.home-content p, .about-container, ', { origin: 'right' });
 
 
